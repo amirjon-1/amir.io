@@ -440,3 +440,22 @@ $(function() {
 
 });
 
+
+
+$('.project-carousel').owlCarousel({
+  items: 1,
+  loop: true,
+  nav: true,
+  dots: false,
+  autoplay: true,
+  autoplayTimeout: 4000,
+  autoplayHoverPause: true,
+  navText: [
+    '<span class="carousel-arrow">&#8592;</span>',
+    '<span class="carousel-arrow">&#8594;</span>'  
+  ]
+});
+
+
+
+

@@ -21,6 +21,36 @@
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+      .project-carousel .owl-nav {
+        position: absolute;
+        top: 70%;
+        transform: translateY(-90%);
+        right: 60px; 
+        display: flex !important;
+        flex-direction: column;
+        gap: 12px;
+        z-index: 999;
+      }
+
+      .carousel-arrow {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        background: white;
+        color: black;
+        font-size: 22px;
+        font-weight: bold;
+        border-radius: 50%;
+        cursor: pointer;
+        user-select: none;
+      }
+
+    </style>
+    
   </head>
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
 	  
@@ -74,14 +104,13 @@
     			<div class="col-md-6 col-lg-6 d-flex">
     				<div class="img-about img d-flex align-items-stretch">
     					<div class="overlay"></div>
-	    				<div class="img d-flex align-self-stretch align-items-center" style="background-image:url(image/amir.JPG);">
+	    				<div class="img d-flex align-self-stretch align-items-center" alt="image of amirjon" style="background-image:url(image/amir.JPG);">
 	    				</div>
     				</div>
     			</div>
     			<div class="col-md-6 col-lg-6 pl-md-5 py-5">
     				<div class="row justify-content-start pb-3">
 		          <div class="col-md-12 heading-section ftco-animate">
-		          	<h1 class="big">About</h1>
 		            <h2 class="mb-4">About Me</h2>
 		            <p>I am an undergraduate student at Williams College, pursuing a double major in Computer Science and Statistics. With a strong foundation in software development, I have experience creating web and app solutions tailored to business needs. My background includes technology internships that emphasize computer security and software development. I am known for my problem-solving abilities, project management skills, and dedication to continuous learning, and I strive to deliver innovative solutions while growing as a professional.</p>
 					<p>I specialize in Java, Python, and React, with a primary focus on full-stack development. Additionally, I have experience working with machine learning and building perdiction models. I am skilled in Figma, Web Development, and UI/UX design.</p>
@@ -113,30 +142,47 @@
     	 <div class="container">
         <div class="row justify-content-center mb-5 pb-5">
           <div class="col-md-7 heading-section text-center ftco-animate">
-            <h1 class="big big-2">Projects</h1>
             <h2 class="mb-4">My Blogs and Projects</h2>
           </div>
         </div>
         <div class="row d-flex">
           <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry justify-content-end">
-              <a target="_blank" href="https://medium.com/@au2/strava-review-user-experience-cf0bc96ea563" class="block-20" style="background-image: url('images/image_1.jpg');">
-              </a>
+              <div class="blog-entry justify-content-end" style="overflow: hidden;">
+                <div class="block-20 p-0" style="position: relative; height: 300px; border-radius: 10px; overflow: hidden;">
+                  <div class="owl-carousel project-carousel owl-theme">
+                    <div alt="image of strava logo" class="item" style="background-image: url('image/strava.png'); height: 300px; background-size: contain; background-repeat: no-repeat; background-position: center;"></div>
+                    <div alt="image of strava interface" class="item" style="background-image: url('image/hero-image.png'); height: 300px; background-size: contain; background-repeat: no-repeat; background-position: center;"></div>
+                    <!-- image source: https://lifehacker.com/health/strava-is-the-best-running-app-review -->
+                    <div alt="image of moodboard. see blog for details" class="item" style="background-image: url('image/moodboard.png'); height: 300px; background-size: contain; background-repeat: no-repeat; background-position: center;"></div>
+                  </div>
+                </div>
+
               <div class="text mt-3 float-right d-block">
                 <h3 class="heading"><a target="_blank" href="https://medium.com/@au2/strava-review-user-experience-cf0bc96ea563">Strava Review: User Experience</a></h3>
                 <div class="d-flex align-items-center mb-3 meta">
+
 	                <p class="mb-0">
 	                	<span class="mr-2">Feb. 20, 2025</span>
 	                </p>
+
                 </div>
                 <p>In this design sprint, I analyzed Strava's interface through the lens of HCI principles, focusing on how sensors (like GPS and accelerometers), responders (like visual feedback), displays (like maps and activity graphs), and controls (like touch inputs on the mobile app) affect user interaction during their workouts when using the app. Interviews with multiple users of different backgrounds showed us that the app was very effective in supporting fitness goals but there could still be multiple improvements in user experience design. Towards the end, the results showed that Strava should minimize cognitive load and errors for the best user experience.</p>
+                <a target="_blank" href="https://medium.com/@au2/strava-review-user-experience-cf0bc96ea563" style="color: #007bff; text-decoration: underline; font-weight: 500; transition: color 0.3s;">Read More →</a>
+
               </div>
             </div>
           </div>
           <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry justify-content-end">
-              <a target="_blank" href="https://medium.com/@ar30_72964/ds3-bdab96443de3" class="block-20" style="background-image: url('images/image_2.jpg');">
-              </a>
+              <div class="blog-entry justify-content-end" style="overflow: hidden;">
+                <div class="block-20 p-0" style="position: relative; height: 300px; border-radius: 10px; overflow: hidden;">
+                 <div class="owl-carousel project-carousel owl-theme">
+                    <div alt="jewel jet game" class="item" style="background-image: url('image/jewel.png'); height: 300px; background-size: contain; background-repeat: no-repeat; background-position: center;"></div>
+                    <div alt="list of gestures" class="item" style="background-image: url('image/gesture.png'); height: 300px; background-size: contain; background-repeat: no-repeat; background-position: center;"></div>
+                    <div alt="youtube video of playing game with gestures" class="item">
+                      <iframe width="100%" height="300px" src="https://www.youtube.com/embed/3idnnRMmQrI?si=YP0BFn4u7XQj5nKU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                  </div>
+                </div>
               <div class="text mt-3 float-right d-block">
                 <h3 class="heading"><a target="_blank" href="https://medium.com/@ar30_72964/ds3-bdab96443de3">Incorporating Hand Gestures to Increase Accessibility</a></h3>
                 <div class="d-flex align-items-center mb-3 meta">
@@ -145,14 +191,22 @@
 	                </p>
                 </div>
                 <p>In this project, my team and I tried to enhance the accessibility of a web-based game called Jewel Jet, by incorporating intuitive hand gestures (using the MediaPipe Gesture Recognizer library) to replace traditional keyboard controls. By creating gestures that directly resembled game actions, we tried to create a inclusive gaming experience for people who aren't able to interact with keyboards (i.e. users with motor impairments). Our gestures gave the user a sense of direct manipulation because of its simplicity and connection to the actual movements of the game, thus improving usability of the game.</p>
+                <a target="_blank" href="https://medium.com/@ar30_72964/ds3-bdab96443de3" style="color: #007bff; text-decoration: underline; font-weight: 500; transition: color 0.3s;">Read More →</a>
+
               </div>
             </div>
           </div>
           <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry">
-              <a target="_blank" href="https://medium.com/@tc31/designing-for-discoverability-a-bookstore-ui-ux-makeover-35fee22cffe7
-" class="block-20" style="background-image: url('images/image_3.jpg');">
-              </a>
+              <div class="blog-entry justify-content-end" style="overflow: hidden;">
+                <div class="block-20 p-0" style="position: relative; height: 300px; border-radius: 10px; overflow: hidden;">
+                  <div class="owl-carousel project-carousel owl-theme">
+                    <div alt="before and after designs" class="item" style="background-image: url('image/ba.png'); height: 300px; background-size: contain; background-repeat: no-repeat; background-position: center;"></div>
+                    <div alt="the drafts/sketches for the design" class="item" style="background-image: url('image/draft.png'); height: 300px; background-size: contain; background-repeat: no-repeat; background-position: center;"></div>
+                    <div alt="youtube video showing our new bookstore design" class="item">
+                      <iframe width="100%" height="300px" src="https://www.youtube.com/embed/hnqXwwjDH3A?si=CwG_9F_3n_IY9Gfo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                  </div>
+                </div>
               <div class="text mt-3 float-right d-block">
                 <h3 class="heading"><a target="_blank" href="https://medium.com/@tc31/designing-for-discoverability-a-bookstore-ui-ux-makeover-35fee22cffe7">Designing for Discoverability: A Bookstore UI/UX Makeover</a></h3>
                 <div class="d-flex align-items-center mb-3 meta">
@@ -161,14 +215,21 @@
 	                </p>
                 </div>
                 <p>In this design sprint, my team and I focused on improving the UI/UX of a bookstore website. Using Bootstrap and basic web development, we enhanced the visual hierarchy, added visual elements (book covers), and implemented elements like hover effects and filters to make the interface better. We focused on HCI principles like the Gestalt principles of similarity and grouping to create a much more visually appealing and user friendly interface. User testing allowed us to improve on our prototype to create a fully functional and visually appealing final interface.</p>
+                <a target="_blank" href="https://medium.com/@tc31/designing-for-discoverability-a-bookstore-ui-ux-makeover-35fee22cffe7" style="color: #007bff; text-decoration: underline; font-weight: 500; transition: color 0.3s;">Read More →</a>
+    
               </div>
             </div>
           </div>
           <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry">
-              <a target="_blank" href="https://medium.com/@au2/accessibility-in-amazon-for-users-with-cognitive-and-learning-disabilities-fb5a78e449af
-" class="block-20" style="background-image: url('images/image_3.jpg');">
-              </a>
+              <div class="blog-entry justify-content-end" style="overflow: hidden;">
+                <div class="block-20 p-0" style="position: relative; height: 300px; border-radius: 10px; overflow: hidden;">
+                   <div class="owl-carousel project-carousel owl-theme">
+                    <div alt="amazon logo" class="item" style="background-image: url('image/amamama.jpg'); height: 300px; background-size: contain; background-repeat: no-repeat; background-position: center;"></div>
+                    <div alt="issues seen in amazon showing cognitive overload" class="item" style="background-image: url('image/ama.png'); height: 300px; background-size: contain; background-repeat: no-repeat; background-position: center;"></div>
+                    <div alt="issues seen in amazon showing inconsistent design" class="item" style="background-image: url('image/aa.png'); height: 300px; background-size: contain; background-repeat: no-repeat; background-position: center;"></div>
+
+                  </div>
+                </div>
               <div class="text mt-3 float-right d-block">
                 <h3 class="heading"><a target="_blank" href="https://medium.com/@au2/accessibility-in-amazon-for-users-with-cognitive-and-learning-disabilities-fb5a78e449af">Accessibility in Amazon for Users with Cognitive and Learning Disabilities</a></h3>
                 <div class="d-flex align-items-center mb-3 meta">
@@ -176,15 +237,22 @@
 	                	<span class="mr-2">May. 1, 2025</span>
 	                </p>
                 </div>
-                <p>This analysis examined Amazon's interface through the perspectives of users with cognitive and learning disabilities. The study highlighted challenges like information overload and complex navigation, which can hinder accessibility. By advocating for value-sensitive, universal, and inclusive design principles, the project emphasized the need for customizable interfaces that reduce cognitive load, thereby enhancing usability for a broader range of users.</p>
+                <p>In this design sprint, I analyzed Amazon's interface through the perspectives of users with cognitive and learning disabilities. Despite Amazon being one of the biggest e-commerce platforms, first person accounts showed the challenges they experienced like information overload and complex navigation. By using value-sensitive, universal, and inclusive design principles, I gave multiple suggestions to improve the current user interface so it would be able to reduce issues like cognitive load, and thus enhancing usability for a all kinds of users.</p>
+                <a target="_blank" href="https://medium.com/@au2/accessibility-in-amazon-for-users-with-cognitive-and-learning-disabilities-fb5a78e449af" style="color: #007bff; text-decoration: underline; font-weight: 500; transition: color 0.3s;">Read More →</a>
+    
               </div>
             </div>
           </div>
           <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry">
-              <a target="_blank" href="https://medium.com/@tc31/part-1-needs-gathering-and-ideation-e24a5eb3cb1d
-" class="block-20" style="background-image: url('images/image_3.jpg');">
-              </a>
+              <div class="blog-entry justify-content-end" style="overflow: hidden;">
+                <div class="block-20 p-0" style="position: relative; height: 300px; border-radius: 10px; overflow: hidden;">
+                   <div class="owl-carousel project-carousel owl-theme">
+                    <div alt="guy with impaired vision" class="item" style="background-image: url('image/impaired.png'); height: 300px; background-size: contain; background-repeat: no-repeat; background-position: center;"></div>
+                    <div alt="the drafts/sketches for the design" class="item" style="background-image: url('image/sketch.png'); height: 300px; background-size: contain; background-repeat: no-repeat; background-position: center;"></div>
+                    <div alt="youtube video showing our browser extension being used" class="item">
+                      <iframe width="100%" height="300px" src="https://www.youtube.com/embed/o-Td_AeVnLg?si=DpQnAOCjYLZ1tzHY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                    </div>
+                  </div>
+                </div>
               <div class="text mt-3 float-right d-block">
                 <h3 class="heading"><a target="_blank" href="https://medium.com/@tc31/part-1-needs-gathering-and-ideation-e24a5eb3cb1d">Seeing More Clearly: An AI-Powered Extension for Describing Online Images</a></h3>
                 <div class="d-flex align-items-center mb-3 meta">
@@ -192,7 +260,9 @@
 	                	<span class="mr-2">May. 12, 2025</span>
 	                </p>
                 </div>
-                <p>In this project, the team developed a browser extension that uses AI to generate descriptions for images lacking alt text, addressing accessibility issues for visually impaired users. The tool allows users to click on any image and receive an instant textual description, facilitating better understanding of visual content. This initiative underscores HCI's focus on assistive technologies and the importance of inclusive design in making digital content accessible to all users.</p>
+                <p>For this project, my team and I developed a browser extension that uses AI to generate descriptions for images that either lack alt text or just need further explanation which addressed accessibility issues for not just users with visual impairments, but all users. The user is able to click and an image and get a textual description of the image back which helps understand visual content especially ones like abstract art. We were able to create assistive technology that incorporates universal design so it can be useful to all users.</p>
+                <a target="_blank" href="https://medium.com/@tc31/part-1-needs-gathering-and-ideation-e24a5eb3cb1d" style="color: #007bff; text-decoration: underline; font-weight: 500; transition: color 0.3s;">Read More →</a>
+          
               </div>
             </div>
           </div>
@@ -209,7 +279,6 @@
       <div class="container">
       	<div class="row justify-content-center mb-5 pb-3">
           <div class="col-md-7 heading-section text-center ftco-animate">
-            <h1 class="big big-2">Contact</h1>
             <h2 class="mb-4">Contact Me</h2>
           </div>
         </div>
@@ -293,7 +362,7 @@
           <div class="col-md">
             <div class="ftco-footer-widget mb-4">
               <h2 class="ftco-heading-2">About</h2>
-              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+              <p>I am a Williams College undergraduate double majoring in Computer Science and Statistics, specializing in full-stack development, machine learning, and UI/UX design, with experience in Java, Python, and React.</p>
               <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
                 <li class="ftco-animate"><a target="_blank" href="https://github.com/amirjon-1"><span class="icon-github"></span></a></li>
                 <li class="ftco-animate"><a target="_blank" href="https://www.linkedin.com/in/amirjon-ulmasov-1b163b267/"><span class="icon-linkedin"></span></a></li>
@@ -336,11 +405,11 @@
         </div>
       </div>
     </footer>
-    
   
 
   <!-- loader -->
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
 
 
   <script src="js/jquery.min.js"></script>
